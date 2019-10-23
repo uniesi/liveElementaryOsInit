@@ -1,3 +1,13 @@
+NOME="UNIESI"
+EMAIL="itapira.cpd@unip.br"
+
+echo "INFORME SEU NOME E EMAIL PARA CONFIGURAR O GIT: "
+read -p "NOME: " NOME
+read -p "E-MAIL: " EMAIL
+
+echo "NOME: $NOME"
+echo "E-MAIL: $EMAIL"
+
 sudo apt-get update
 sudo apt-get install -y nodejs yarn gdebi
 wget -O /tmp/chrome.deb https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
@@ -13,5 +23,5 @@ sudo apt-get install -y apt-transport-https
 sudo apt-get update
 sudo apt-get install -y code
 
-git config --global user.email "itapira.cpd@unip.br"
-git config --global user.name "uniesi"
+git config --global user.email "$EMAIL"
+git config --global user.name "$NOME"
